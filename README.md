@@ -3,6 +3,7 @@
 Проект автоматизированного тестирования формы логина сайта saucedemo.com
 
 ## Реализованные сценарии
+
 1. Успешная авторизация (`` `standard_user` ``).
 2. Попытка входа заблокированного пользователя (`` `locked_out_user` ``).
 3. Вход с неверным паролем.
@@ -10,7 +11,8 @@
 5. Тестирование пользователя с задержкой загрузки (`` `performance_glitch_user` ``).
 
 ## Стек
-- Python 3.12
+
+- Python 3.10
 - Selenium
 - Pytest
 - Allure
@@ -26,7 +28,7 @@ pip install -r requirements.txt
 
 2. Запустите тесты:
 
-``` bash
+```bash
 pytest --alluredir=allure-results
 ```
 
@@ -47,6 +49,7 @@ DOCKER_BUILDKIT=1 docker build -t sauce_test .
 ```
 
 > Если при сборке вылетает ошибка buildx component is missing, установите его:
+
 - Arch Linux:
 
 ```bash
@@ -54,6 +57,7 @@ sudo pacman -S docker-buildx
 ```
 
 2. Запустите контейнер:
+
 - Linux / MacOS / PowerShell:
 
 ```bash
@@ -67,7 +71,7 @@ docker run --rm -v %cd%/allure-results:/app/allure-results sauce_test
 ```
 
 3. Просмотр отчета:
-После выполнения тестов папка `` `allure-results` `` появится в корне проекта
+   После выполнения тестов папка `` `allure-results` `` появится в корне проекта
 
 ```bash
 allure serve allure-results
