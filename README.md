@@ -71,7 +71,7 @@ docker run --rm -v %cd%/allure-results:/app/allure-results sauce_test
 ```
 
 3. Просмотр отчета:
-   После выполнения тестов папка `` `allure-results` `` появится в корне проекта
+> После выполнения тестов папка `` `allure-results` `` появится в корне проекта
 
 ```bash
 allure serve allure-results
